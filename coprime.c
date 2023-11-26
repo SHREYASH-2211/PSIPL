@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdbool.h>
-bool isCoPrime(int num1, int num2){
+bool isCoPrime(int start, int end){
   int fact=0;
   for (start; start <= end; start++) {
         int fact = 0; // 

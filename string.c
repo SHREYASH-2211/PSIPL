@@ -1,30 +1,31 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main() {
+    char str[] = "Chanting God";
+    int vowel = 0, consonant = 0, totalCharacters = 0, words = 0, i, inWord = 0;
 
+    for (i = 0; str[i] != '\0'; i++) {//vowel
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
+            str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U') {
+            vowel++;
+        } else if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) {//consonant
+            consonant++;
+        }
+        if (str[i] != ' ' && str[i] != '\t' && str[i] != '\n') {//total characters
+            totalCharacters++;
+        }
+        if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n') {//words
+            inWord = 0;
+        } else if (!inWord) {
+            inWord = 1;
+            words++;
+        }
+    }
 
-    char str[]="Shreyash";
-    int length=0,consonant=0,digit=0,space=0,i;
-    
-    
-    for(i=0;str[i]!='\0';i++){
-   	 if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'){
-   		 length++;
-   	 }
-   	 else if(str[i]>='a'&&str[i]<='z'){
-   		 consonant++;
-   	 }
-   	 else if(str[i]>='1'&&str[i]<='9'){
-   		 digit++;
-   	 }
-   	 else if(str[i]<=' '){
-   		 space++;
-   	 }
+    printf("Vowel is %d\n", vowel);
+    printf("Consonant is %d\n", consonant);
+    printf("Total Characters is %d\n", totalCharacters);
+    printf("Words is %d\n", words);
+
+    return 0;
 }
-   printf("Vowel is %d \n",length);
-    printf("Consonant is %d\n",consonant);
-    printf("Digit is %d\n",digit);
-    printf("Space is %d\n",space);
-return 0;
-}
-

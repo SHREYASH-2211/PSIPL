@@ -1,0 +1,1 @@
+fgets(line, sizeof(line), stdin);

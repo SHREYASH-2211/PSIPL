@@ -18,8 +18,7 @@ void print(int m, int n, int arr[m][n]){
 
 void MultMat(int m1, int n1, int n2, int m2, int arr1[m1][n1], int arr2[m2][n2] , int res[m1][n2]){
 for(int i=0 ;i<m1 ;i++){
-		for(int j=0; j<n2; j++){
-			
+		for(int j=0; j<n2; j++){			
 		res[i][j]=0;
 		}
 	
